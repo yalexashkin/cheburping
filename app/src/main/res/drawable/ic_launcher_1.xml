@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Background rounded rect -->
+<!--    <path android:pathData="M96,0 H416 Q512,0 512,96 V416 Q512,512 416,512 H96 Q0,512 0,416 V96 Q0,0 96,0 Z">-->
+<!--        <aapt:attr name="android:fillColor">-->
+<!--            <gradient-->
+<!--                android:type="radial"-->
+<!--                android:centerX="0.5"-->
+<!--                android:centerY="0.5"-->
+<!--                android:gradientRadius="256"-->
+<!--                android:startColor="#1a237e"-->
+<!--                android:endColor="#0d0d2b" />-->
+<!--        </aapt:attr>-->
+<!--    </path>-->
+
+    <!-- Globe body -->
+    <path android:pathData="M50,240 A170,170 0 1,0 390,240 A170,170 0 1,0 50,240 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="0.4"
+                android:centerY="0.35"
+                android:gradientRadius="170"
+                android:startColor="#4fc3f7"
+                android:endColor="#0277bd" />
+        </aapt:attr>
+    </path>
+
+    <!-- Globe grid lines clipped to sphere -->
+    <group>
+        <clip-path android:pathData="M50,240 A170,170 0 1,0 390,240 A170,170 0 1,0 50,240 Z" />
+        <!-- Latitude lines -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M52,140 A168,40 0 1,0 388,140 A168,40 0 1,0 52,140 Z"
+            android:strokeAlpha="0.25"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="2" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M50,240 A170,55 0 1,0 390,240 A170,55 0 1,0 50,240 Z"
+            android:strokeAlpha="0.25"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="2" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M80,340 A140,40 0 1,0 360,340 A140,40 0 1,0 80,340 Z"
+            android:strokeAlpha="0.25"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="2" />
+        <!-- Longitude curves -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M170,240 A50,170 0 1,0 270,240 A50,170 0 1,0 170,240 Z"
+            android:strokeAlpha="0.25"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="2" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M110,240 A110,170 0 1,0 330,240 A110,170 0 1,0 110,240 Z"
+            android:strokeAlpha="0.25"
+            android:strokeColor="#ffffff"
+            android:strokeWidth="2" />
+    </group>
+
+    <!-- Globe outline -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50,240 A170,170 0 1,0 390,240 A170,170 0 1,0 50,240 Z"
+        android:strokeAlpha="0.3"
+        android:strokeColor="#ffffff"
+        android:strokeWidth="2" />
+
+    <!-- Equator highlight -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M50,240 A170,18 0 1,0 390,240 A170,18 0 1,0 50,240 Z"
+        android:strokeAlpha="0.5"
+        android:strokeColor="#81d4fa"
+        android:strokeWidth="1.5" />
+
+    <!-- Shine -->
+    <path
+        android:fillAlpha="0.12"
+        android:fillColor="#ffffff"
+        android:pathData="M120,170 A55,30 0 1,0 230,170 A55,30 0 1,0 120,170 Z" />
+
+    <!-- Cheburashka -->
+    <group
+        android:translateX="194"
+        android:translateY="82">
+
+        <!-- Body -->
+        <path
+            android:fillColor="#c8860a"
+            android:pathData="M-32,88 A32,36 0 1,0 32,88 A32,36 0 1,0 -32,88 Z" />
+
+        <!-- Left ear outer -->
+        <path
+            android:fillColor="#c8860a"
+            android:pathData="M-74,28 A30,30 0 1,0 -14,28 A30,30 0 1,0 -74,28 Z" />
+        <!-- Left ear inner -->
+        <path
+            android:fillAlpha="0.7"
+            android:fillColor="#e8a030"
+            android:pathData="M-64,28 A20,20 0 1,0 -24,28 A20,20 0 1,0 -64,28 Z" />
+
+        <!-- Right ear outer -->
+        <path
+            android:fillColor="#c8860a"
+            android:pathData="M14,28 A30,30 0 1,0 74,28 A30,30 0 1,0 14,28 Z" />
+        <!-- Right ear inner -->
+        <path
+            android:fillAlpha="0.7"
+            android:fillColor="#e8a030"
+            android:pathData="M24,28 A20,20 0 1,0 64,28 A20,20 0 1,0 24,28 Z" />
+
+        <!-- Head -->
+        <path
+            android:fillColor="#d4920f"
+            android:pathData="M-38,22 A38,38 0 1,0 38,22 A38,38 0 1,0 -38,22 Z" />
+
+        <!-- Face lighter patch -->
+        <path
+            android:fillAlpha="0.6"
+            android:fillColor="#e8b86d"
+            android:pathData="M-24,30 A24,20 0 1,0 24,30 A24,20 0 1,0 -24,30 Z" />
+
+        <!-- Left eye white -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M-26,16 A13,13 0 1,0 0,16 A13,13 0 1,0 -26,16 Z" />
+        <!-- Right eye white -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M0,16 A13,13 0 1,0 26,16 A13,13 0 1,0 0,16 Z" />
+
+        <!-- Left pupil -->
+        <path
+            android:fillColor="#3e2000"
+            android:pathData="M-19,17 A7,7 0 1,0 -5,17 A7,7 0 1,0 -19,17 Z" />
+        <!-- Right pupil -->
+        <path
+            android:fillColor="#3e2000"
+            android:pathData="M5,17 A7,7 0 1,0 19,17 A7,7 0 1,0 5,17 Z" />
+
+        <!-- Left eye shine -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M-11.5,13 A2.5,2.5 0 1,0 -6.5,13 A2.5,2.5 0 1,0 -11.5,13 Z" />
+        <!-- Right eye shine -->
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M12.5,13 A2.5,2.5 0 1,0 17.5,13 A2.5,2.5 0 1,0 12.5,13 Z" />
+
+        <!-- Nose -->
+        <path
+            android:fillColor="#a06010"
+            android:pathData="M-5,30 A5,4 0 1,0 5,30 A5,4 0 1,0 -5,30 Z" />
+
+        <!-- Mouth smile -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M-10,38 Q0,46 10,38"
+            android:strokeColor="#7a4800"
+            android:strokeLineCap="round"
+            android:strokeWidth="2.5" />
+
+        <!-- Left arm waving -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M-28,72 Q-58,50 -52,28"
+            android:strokeColor="#c8860a"
+            android:strokeLineCap="round"
+            android:strokeWidth="10" />
+        <!-- Right arm -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M28,72 Q50,60 46,45"
+            android:strokeColor="#c8860a"
+            android:strokeLineCap="round"
+            android:strokeWidth="10" />
+
+        <!-- Left leg -->
+        <path
+            android:fillColor="#b07010"
+            android:pathData="M-25,120 A11,14 0 1,0 -3,120 A11,14 0 1,0 -25,120 Z" />
+        <!-- Right leg -->
+        <path
+            android:fillColor="#b07010"
+            android:pathData="M3,120 A11,14 0 1,0 25,120 A11,14 0 1,0 3,120 Z" />
+    </group>
+
+    <!-- Signal ping rings -->
+    <path
+        android:fillAlpha="0.9"
+        android:fillColor="#00e676"
+        android:pathData="M322,130 A18,18 0 1,0 358,130 A18,18 0 1,0 322,130 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M308,130 A32,32 0 1,0 372,130 A32,32 0 1,0 308,130 Z"
+        android:strokeAlpha="0.6"
+        android:strokeColor="#00e676"
+        android:strokeWidth="3" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M292,130 A48,48 0 1,0 388,130 A48,48 0 1,0 292,130 Z"
+        android:strokeAlpha="0.35"
+        android:strokeColor="#00e676"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M275,130 A65,65 0 1,0 405,130 A65,65 0 1,0 275,130 Z"
+        android:strokeAlpha="0.15"
+        android:strokeColor="#00e676"
+        android:strokeWidth="2" />
+
+    <!-- Checkmark -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M332,130 L338,137 L350,122"
+        android:strokeColor="#ffffff"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3.5" />
+
+</vector>

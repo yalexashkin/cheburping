@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity" android:padding="4.dp">
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
+    <TextView
+            android:text="Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView6"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"/>
+    <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="IP: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView2"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/ipField"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="Interval (S):"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView3"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/intervalField"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="Timeout (S):"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView4"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/timeoutField"/>
+        </TableRow>
+        <!--        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">-->
+        <!--            <TextView-->
+        <!--                    android:text="No notification on\nmanual rescan for (S):&#45;&#45;"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="match_parent" android:id="@+id/textView5"/>-->
+        <!--            <EditText-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:inputType="number"-->
+        <!--                    android:ems="10"-->
+        <!--                    android:id="@+id/manualRescanTimeoutField"/>-->
+        <!--        </TableRow>-->
+    </TableLayout>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+    <TextView
+            android:text="[EXPERIMENTAL] Only scan these networks:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <CheckBox
+                android:text="5G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_5g"/>
+        <CheckBox
+                android:text="4G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_4g"/>
+        <CheckBox
+                android:text="3G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_3g"/>
+        <CheckBox
+                android:text="2G"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_2g"/>
+        <CheckBox
+                android:text="WiFi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_wifi"/>
+        <CheckBox
+                android:text="other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/checkbox_other"/>
+    </LinearLayout>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+    <Switch
+            android:text="Launch service on boot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/swLaunchOnBoot"/>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+    <Button
+            android:text="Apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btnApply" android:onClick="apply"/>
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text=""
+            android:onClick="btnSvcToggle" android:id="@+id/btnSvcToggle"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/logsScroll">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/logs_text"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
