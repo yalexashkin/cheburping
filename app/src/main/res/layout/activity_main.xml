@@ -73,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="16dp"/>
     <TextView
-            android:text="[EXPERIMENTAL] Only scan these networks:"
+            android:text="[EXPERIMENTAL] Only scan these networks:\n(Unreliable in practice)"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/textView"/>
     <LinearLayout
